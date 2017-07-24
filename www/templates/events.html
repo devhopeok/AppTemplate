@@ -1,0 +1,42 @@
+﻿<ion-view view-title="Events" ng-controller="EventsCtrl">
+    <ion-nav-title>
+        <span ng-style="headerContent">Events</span>
+    </ion-nav-title>
+    <ion-content>
+
+        <!--Creates Events Cards from Module Data-->
+        <div ng-repeat="event in eventData">
+
+            <!--Creates the Card Div with a Boolean value. On click change the Boolean.-->
+            <div class="card" ng-init="cardClicked = 'false'">
+
+                <!--Card Header-->
+                <div ng-style="cardHeader" class="item item-divider" ng-click="cardClicked = { 'true': 'false', 'false' : 'true'}[cardClicked]">
+                    <icon ng-show="cardClicked == 'false'" ng-style="cardArrow" class="ion-arrow-right-b"></icon>
+                    <icon ng-show="cardClicked == 'true'" ng-style="cardArrow" class="ion-arrow-down-b"></icon>
+                    {{event.Name | unsafe}}
+                </div>
+
+                <!--Card Content-->
+                <div class="item item-text-wrap">
+                    <div ng-click="cardClicked = { 'true': 'false', 'false' : 'true'}[cardClicked]">
+                        <p ng-show="event.IsAllDay == false"><b>{{event.StartTime | date}}:</b> {{event.StartTime | date: 'h:mma'}} - {{event.EndTime | date: 'h:mma'}}</p>
+                        <p ng-show="event.IsAllDay == true"><b>{{event.StartTime | date}}:</b> All Day</p>
+                    </div>
+
+                    <!--Only show the below extra information if the card boolean is true. (clicked)-->
+                    <div ng-show="cardClicked == 'true'">
+                        <p ng-bind-html="event.Description | unsafe"></p>
+
+                        <a ng-style="cardButton" class="button button-full button-small {{calendarIcon}}" ng-click="openCalendar(event)">
+                             Add to Calendar
+                        </a>
+                        <a ng-style="cardButton" class="button button-full button-small {{websiteIcon}}" ng-click="openWebsite(event)">
+                             Register for Event
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

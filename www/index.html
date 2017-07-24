@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+
+    <title>MemberPlus</title>
+
+    <!--Default CSS Files-->
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+
+    <!--Custom CSS Files-->
+    <link href="css/global.css" rel="stylesheet">
+
+</head>
+<body ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+
+    <ion-footer-bar id="bannerAdsFooter" ng-controller="BannerAdsCtrl">
+        <img class="bannerAd" src="{{image}}" ng-click="openAd()" />
+    </ion-footer-bar>
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+
+    <!--Default JS Files-->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/platformOverrides.js"></script>
+
+    <!--Controller JS Files-->
+    <script src="js/app.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/module.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+﻿/*Ionic Popup Styles*/
+.popup-buttons .button {
+    background-color: lightgray;
+    color: black;
+}
+
+.popup-buttons .button.activated {
+    background-color: #333333;
+    color: white;
+}
+
+.popup-body {
+    text-align: center;
+}
+
+.QLLogo {
+    max-width: 100%;
+    max-height: 40%;
+    display: block;
+    margin: auto;
+}
+
+.aboutLogo {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.item-text-wrap img {
+    max-width: 100%;
+}
+
+.aboutContent {
+    text-align: center;
+}
+
+.aboutContent p,
+.aboutContent h3 {
+    color: cornflowerblue;
+}
+
+.homeLogo {
+    max-width: 100%;
+    max-height: 40vh;
+    display: block;
+    margin: auto;
+} 
+
+.button-full {
+    box-shadow: 0 0 5px #888888;
+}
+
+.button-full:active {
+    box-shadow: 0 0 10px #1a1a1a;
+}
+
+#searchBarHeader {
+    width: 101%;
+}
+
+ion-view[view-title="Home"] ion-content {
+    padding: 10px;
+}
+
+/*Give 20px Between Rows*/
+ion-view[view-title="Home"] .row {
+    padding-top: 10px;
+}
+
+/*Set Content Background to Transparent*/
+ion-view[view-title="Home"] div.module-container .item-complex .item-content {
+    padding: 3px 10px;
+    background-color: transparent;
+}
+
+div.module-container .item-complex {
+    visibility: visible;
+    background-color: transparent;
+}
+
+/*Give Icon Container no Border and Background*/
+ion-view[view-title="Home"] .item {
+    border: none;
+}
+
+.module-container .item.active,
+.module-container .item.activated {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/*home.html Module Icon Styling*/
+.module-icon {
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: visible;
+}
+
+.module-icon-circle {
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    margin: 0 auto;
+    visibility: visible;
+    background-color: white;
+}
+
+.iconText {
+    visibility: visible;
+    text-align: center;
+}
+
+#icon-container {
+    margin: 0 auto;
+    width: 100%;
+    position: fixed;
+    bottom: 6%;
+}
+
+.bannerAd {
+    width: 104%;
+    margin-top: -2%;
+    margin-bottom: -2%;
+    margin-left: -2%;
+    margin-right: -2%;
+}
+
+/*Position Main Content Above Banner Ads*/
+.scroll-content {
+    bottom: 5%;
+}
+
+@media (min-width:700px) {
+    ion-view[view-title="Home"]
+        .module-icon-circle {
+            width: 100px;
+            height: 100px;
+        }
+        .module-icon {
+            font-size: 70px;
+        }
+        .iconText {
+            font-size: 20px;
+        }
+}

@@ -1,0 +1,56 @@
+﻿<ion-view view-title="Home" ng-style="homeBackground" ng-controller="HomeCtrl">
+    <ion-nav-title>
+        <span ng-style="headerContent">Home</span>
+    </ion-nav-title>
+    <ion-content scroll="false">
+        <div class="content_center">
+            <img ng-style="logoBackground" class="homeLogo" src="{{logoFile}}" alt="{{logoFile}}" />
+        </div>
+    </ion-content>
+
+    <div id="icon-container" ng-init="QLDisplay = quicklinkVisibility">
+        <div class="row" ng-show="QLDisplay == 'enabled'">
+            <div class="col module-container">
+                <ion-item href="#/app/quicklinkA"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{quicklinkAIcon}}" alt="{{quicklinkATitle}}"></icon></div></ion-item>
+                <ion-item href="#/app/quicklinkA"><p ng-style="iconText" class="iconText">{{quicklinkATitle}}</p></ion-item>
+            </div>
+            <div class="col module-container">
+                <ion-item href="#/app/quicklinkB"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{quicklinkBIcon}}" alt="{{quicklinkBTitle}}"></icon></div></ion-item>
+                <ion-item href="#/app/quicklinkB"><p ng-style="iconText" class="iconText">{{quicklinkBTitle}}</p></ion-item>
+            </div>
+            <div class="col module-container">
+                <ion-item href="#/app/quicklinkC"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{quicklinkCIcon}}" alt="{{quicklinkCTitle}}"></icon></div></ion-item>
+                <ion-item href="#/app/quicklinkC"><p ng-style="iconText" class="iconText">{{quicklinkCTitle}}</p></ion-item>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col module-container">
+                <ion-item href="#/app/hotdeals"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{hotdealsIcon}}" alt="Hot Deals"></icon></div></ion-item>
+                <ion-item href="#/app/hotdeals"><p ng-style="iconText" class="iconText">Hot Deals</p></ion-item>
+            </div>
+            <div class="col module-container">
+                <ion-item href="#/app/jobs"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{jobsIcon}}" alt="Jobs"></icon></div></ion-item>
+                <ion-item href="#/app/jobs"><p ng-style="iconText" class="iconText">Jobs</p></ion-item>
+            </div>
+            <div class="col module-container">
+                <ion-item href="#/app/search"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{searchIcon}}" alt="Businesses"></icon></div></ion-item>
+                <ion-item href="#/app/search"><p ng-style="iconText" class="iconText">Businesses</p></ion-item>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col module-container">
+                <ion-item href="#/app/news"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{newsIcon}}" alt="News"></icon></div></ion-item>
+                <ion-item href="#/app/news"><p ng-style="iconText" class="iconText">News</p></ion-item>
+            </div>
+            <div class="col module-container">
+                <ion-item href="#/app/events"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{eventsIcon}}" alt="Events"></icon></div></ion-item>
+                <ion-item href="#/app/events"><p ng-style="iconText" class="iconText">Events</p></ion-item>
+            </div>
+            <div class="col module-container">
+                <ion-item href="#/app/about"><div ng-style="moduleIconCircle" class="module-icon-circle"><icon ng-style="moduleIcon" class="module-icon {{aboutIcon}}" alt="About"></icon></div></ion-item>
+                <ion-item href="#/app/about"><p ng-style="iconText" class="iconText">About</p></ion-item>
+            </div>
+        </div>
+    </div>
+
+</ion-view>
