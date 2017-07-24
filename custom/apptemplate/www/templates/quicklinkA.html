@@ -1,0 +1,41 @@
+<ion-view view-title="QuicklinkA" ng-controller="QuicklinkACtrl">
+    <ion-nav-title>
+        <span ng-style="headerContent">{{quicklinkATitle}}</span>
+    </ion-nav-title>
+    <ion-content>
+        <!--Creates Eat QuickLink Cards from Module Data-->
+        <div ng-repeat="quicklink in quicklinkAData">
+            <!--Creates the Card Div with a Boolean value. On click change the Boolean.-->
+            <div class="card" ng-init="cardClicked = 'false'">
+                <!--Card Header-->
+                <div ng-style="cardHeader" class="item item-divider" ng-click="cardClicked = { 'true': 'false', 'false' : 'true'}[cardClicked]">
+                    <icon ng-show="cardClicked == 'false'" ng-style="cardArrow" class="ion-arrow-right-b"></icon>
+                    <icon ng-show="cardClicked == 'true'" ng-style="cardArrow" class="ion-arrow-down-b"></icon>
+
+                    {{quicklink.DisplayName | unsafe}}
+                </div>
+                <!--Card Content-->
+                <div class="item item-text-wrap">
+                    <div ng-click="cardClicked = { 'true': 'false', 'false' : 'true'}[cardClicked]">
+                        <img class="QLLogo" src="{{quicklink.LogoUrl}}" />
+                    </div>
+
+                    <div ng-show="cardClicked == 'true'">
+					<a ng-style="cardButton" href="{{website}}" class="button button-full button-small {{websiteIcon}}" ng-click="openWebsite(quicklink)">
+                            Visit the Website
+                        </a>
+                        <a ng-style="cardButton" href="{{phoneNumber}}" class="button button-full button-small {{callIcon}}" ng-click="openPhone(quicklink)">
+                            Give a Call
+                        </a>
+                        <a ng-style="cardButton" href="{{email}}" class="button button-full button-small {{emailIcon}}" ng-click="openEmail(quicklink)">
+                            Send an Email
+                        </a>
+                        <a ng-style="cardButton" href="{{location}}" class="button button-full button-small {{mapsIcon}}" ng-click="openMaps(quicklink)">
+                            Open in Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
