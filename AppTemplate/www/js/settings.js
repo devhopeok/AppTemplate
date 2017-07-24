@@ -45,6 +45,8 @@ angular.module('starter.settings', [])
 
     var aboutContent = "The Nisswa Chamber of Commerce serves the area as a strong non-profit professional organization whose mission is to promote our businesses, community, and quality of life. The vision of the Nisswa Chamber of Commerce is to promote the Nisswa area community as the preeminent destination to live, visit, work, and play in the Lakes Area.";
 
+    var appID_onesingal = "c8fcabeb-9a27-4cca-94a9-725b44043dd3";
+    var senderID = "840347857106";
     /*********************/
     /* DO NOT EDIT BELOW */
     /*********************/
@@ -111,6 +113,8 @@ angular.module('starter.settings', [])
     };
 
     return {
+        'appID_onesingal': appID_onesingal,
+        'senderID': senderID,
         'ccid': ccid,
         'quicklinkVisibility': quicklinkVisibility,
         'quicklinkACategory': quicklinkACategory,

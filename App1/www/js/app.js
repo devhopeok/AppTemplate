@@ -1,14 +1,14 @@
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'starter.settings'])
 
-
 .filter('unsafe', function($sce) {
     return function(val) {
         return $sce.trustAsHtml(val);
     };
 })
 
-.run(function($ionicPlatform, $rootScope, $state) {
+.run(function($ionicPlatform, $rootScope, $state, settings) {
     $ionicPlatform.ready(function() {
+        console.log("appID:" + settings.appID_onesingal + " senderID:" + settings.senderID);
         if (ionic.Platform.device() === 'ios' && window.cordova && window.cordova.plugins.Keyboard) {
             window.cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             window.cordova.plugins.Keyboard.disableScroll(true);
@@ -41,6 +41,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
                 }
             }
         });
+
+        var notificationOpenedCallback = function(jsonData) {
+          console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+        };
+
+        window.plugins.OneSignal
+          .startInit(settings.appID_onesingal, settings.senderID)
+          .handleNotificationOpened(notificationOpenedCallback)
+          .endInit();
     });
 })
 

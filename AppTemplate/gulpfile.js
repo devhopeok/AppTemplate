@@ -29,5 +29,5 @@ gulp.task('sass', function(done) {
 
 gulp.task('copyWWW', function() {
    gulp.src('./www/**/*')
-   .pipe(gulp.dest('./custom/apptemplate/www'));
+   .pipe(gulp.dest('../App1/www'));
 });
