@@ -61,9 +61,9 @@
         <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
     </platform>
     <platform name="ios">
-      <config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
-        <string>We can add events to your calendar, but only ones that you choose.</string>
-      </config-file>
+        <config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
+            <string>We can add events to your calendar, but only ones that you choose.</string>
+        </config-file>
     </platform>
     <access origin="*"/>
     <access launch-external="yes" origin="tel:*"/>
