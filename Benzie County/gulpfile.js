@@ -26,18 +26,3 @@ gulp.task('sass', function(done) {
     .pipe(gulp.dest('./www/css/'))
     .on('end', done);
 });
-
-gulp.task('copyWWW', function() {
-   gulp.src('./www/**/*')
-   .pipe(gulp.dest('../App1/www'));
-});
-
-gulp.task('copyWWW', function() {
-   gulp.src('./www/**/*')
-   .pipe(gulp.dest('../AppMap/www'));
-});
-
-gulp.task('copyWWW', function() {
-   gulp.src('./www/**/*')
-   .pipe(gulp.dest('../Benzie County/www'));
-});

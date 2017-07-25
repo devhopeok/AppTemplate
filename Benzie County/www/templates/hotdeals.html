@@ -1,0 +1,42 @@
+<ion-view view-title="Hot Deals" ng-controller="HotDealsCtrl">
+    <ion-nav-title>
+        <span ng-style="headerContent">Hot Deals</span>
+    </ion-nav-title>
+    <ion-content>
+        <!--Creates Hot Deal Cards from Module Data-->
+        <div ng-repeat="hotDeal in hotDealData">
+
+            <!--Creates the Card Div with a Boolean value. On click change the Boolean.-->
+            <div class="card" ng-init="cardClicked = 'false'">
+
+                <!--Card Header-->
+                <div ng-style="cardHeader" class="item item-divider" ng-click="cardClicked = { 'true': 'false', 'false' : 'true'}[cardClicked]">
+                   <icon ng-show="cardClicked == 'false'" ng-style="cardArrow" class="ion-arrow-right-b"></icon>
+                   <icon ng-show="cardClicked == 'true'" ng-style="cardArrow" class="ion-arrow-down-b"></icon>
+
+                    {{hotDeal.Title | unsafe}}
+                </div>
+
+                <!--Card Content-->
+                <div class="item item-text-wrap">
+                    <div ng-click="cardClicked = { 'true': 'false', 'false' : 'true'}[cardClicked]">
+                        <p ng-show="cardClicked == 'false'" ng-bind-html="hotDeal.Description | limitTo: 125 | unsafe"></p>
+                        <p ng-show="cardClicked == 'true'" ng-bind-html="hotDeal.Description | unsafe"></p>
+                    </div>
+
+                    <!--Only show the below extra information if the card boolean is true. (clicked)-->
+                    <div ng-show="cardClicked == 'true'">
+                        <p><b>Expiration Date: </b>{{hotDeal.End | date}}</p>
+
+                        <a ng-style="cardButton" href="{{website}}" class="button button-full button-small {{websiteIcon}}" ng-click="openWebsite(hotDeal)">
+                             Visit the Website
+                        </a>
+                        <button ng-style="cardButton" href="{{location}}" class="button button-full button-small {{mapsIcon}}" ng-click="openMaps(hotDeal)">
+                             Open in Maps
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
