@@ -29,15 +29,17 @@ gulp.task('sass', function(done) {
 
 gulp.task('copyWWW', function() {
    gulp.src('./www/**/*')
-   .pipe(gulp.dest('../App1/www'));
-});
-
-gulp.task('copyWWW', function() {
-   gulp.src('./www/**/*')
-   .pipe(gulp.dest('../AppMap/www'));
-});
-
-gulp.task('copyWWW', function() {
-   gulp.src('./www/**/*')
+   .pipe(gulp.dest('../App1/www'))
+   .pipe(gulp.dest('../AppMap/www'))
    .pipe(gulp.dest('../Benzie County/www'));
 });
+//
+// gulp.task('copyWWW', function() {
+//    gulp.src('./www/**/*')
+//    ;
+// });
+//
+// gulp.task('copyWWW', function() {
+//    gulp.src('./www/**/*')
+//    ;
+// });
