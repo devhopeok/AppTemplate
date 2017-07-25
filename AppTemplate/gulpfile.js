@@ -31,3 +31,8 @@ gulp.task('copyWWW', function() {
    gulp.src('./www/**/*')
    .pipe(gulp.dest('../App1/www'));
 });
+
+gulp.task('copyWWW', function() {
+   gulp.src('./www/**/*')
+   .pipe(gulp.dest('../AppMap/www'));
+});
