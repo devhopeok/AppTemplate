@@ -40,6 +40,23 @@ gulp.task('copyAppMapp', function(){
   gulp.src('../AppMap/logo.png')
   .pipe(gulp.dest('./www/res/'))
 });
+
+gulp.task('copyBenzie', function(){
+  gulp.src('../Benzie County/config.xml')
+  .pipe(gulp.dest('./'));
+
+  gulp.src('../Benzie County/settings.js')
+  .pipe(gulp.dest('./www/js/'));
+
+  gulp.src('../Benzie County/resources/**/*')
+  .pipe(gulp.dest('./resources/'));
+
+  gulp.src('../Benzie County/logo.png')
+  .pipe(gulp.dest('./www/res/'))
+});
+
+
+
 // gulp.task('copyWWW', function() {
 //    gulp.src('./www/**/*')
 //    .pipe(gulp.dest('../App1/www'))
