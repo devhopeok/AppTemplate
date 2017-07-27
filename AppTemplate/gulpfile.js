@@ -27,12 +27,25 @@ gulp.task('sass', function(done) {
     .on('end', done);
 });
 
-gulp.task('copyWWW', function() {
-   gulp.src('./www/**/*')
-   .pipe(gulp.dest('../App1/www'))
-   .pipe(gulp.dest('../AppMap/www'))
-   .pipe(gulp.dest('../Benzie County/www'));
+gulp.task('copyAppMapp', function(){
+  gulp.src('../AppMap/config.xml')
+  .pipe(gulp.dest('./'));
+
+  gulp.src('../AppMap/settings.js')
+  .pipe(gulp.dest('./www/js/'));
+
+  gulp.src('../AppMap/resources/**/*')
+  .pipe(gulp.dest('./resources/'));
+
+  gulp.src('../AppMap/logo.png')
+  .pipe(gulp.dest('./www/res/'))
 });
+// gulp.task('copyWWW', function() {
+//    gulp.src('./www/**/*')
+//    .pipe(gulp.dest('../App1/www'))
+//    .pipe(gulp.dest('../AppMap/www'))
+//    .pipe(gulp.dest('../Benzie County/www'));
+// });
 //
 // gulp.task('copyWWW', function() {
 //    gulp.src('./www/**/*')
