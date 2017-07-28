@@ -42,6 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
             }
         });
 
+        // Push Notification 
         var notificationOpenedCallback = function(jsonData) {
           console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
         };
