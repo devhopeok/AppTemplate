@@ -21,7 +21,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
         console.log("tyep of: " + typeof window.ga);
 
         if (typeof window.ga !== "undefined") {
-            window.ga.startTrackerWithId('UA-84899403-18');
+            window.ga.startTrackerWithId(settings.tracker_id);
             window.ga.trackView('Home');
         }
 

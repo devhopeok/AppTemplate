@@ -45,6 +45,7 @@ angular.module('starter.settings', [])
 
     var aboutContent = "Benzie County is a diverse community comprised of resident, second-home owners and visitors. It is recognized as a dynamic resort community that actively nourishes its unique Northern Michigan mystique rich in natural resources, hospitality, recreational opportunities, and strengthened by the presence of the cultural arts and natural beauty. Residents enjoy a quality of life indicated by a high rate of youth retention, an entrepreneurial spirit and an atmosphere where local resources attract businesses appropriate in scale and in harmony with our year-round agro-tourism economy.";
 
+    var tracker_id = "UA-84899403-8";
     /*********************/
     /* DO NOT EDIT BELOW */
     /*********************/
@@ -168,6 +169,7 @@ angular.module('starter.settings', [])
         'apiMembers': apiMembers,
         'members': members,
         'useContextId': useContextId,
-        'contextId': contextId
+        'contextId': contextId,
+        'tracker_id': tracker_id
     }
 });
