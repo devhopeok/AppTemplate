@@ -42,16 +42,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
             }
         });
 
-        // Push Notification
-        var notificationOpenedCallback = function(jsonData) {
-          console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-        };
-
-        // One Signal
-        window.plugins.OneSignal
-          .startInit(settings.appID_onesingal, settings.senderID)
-          .handleNotificationOpened(notificationOpenedCallback)
-          .endInit();
+        // // Push Notification
+        // var notificationOpenedCallback = function(jsonData) {
+        //   console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+        // };
+        //
+        // // One Signal
+        // window.plugins.OneSignal
+        //   .startInit(settings.appID_onesingal, settings.senderID)
+        //   .handleNotificationOpened(notificationOpenedCallback)
+        //   .endInit();
     });
 })
 
