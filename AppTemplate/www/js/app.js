@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'starter.settings'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'starter.settings', 'ionic.cloud'])
 
 .filter('unsafe', function($sce) {
     return function(val) {
@@ -6,9 +6,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
     };
 })
 
-.run(function($ionicPlatform, $rootScope, $state, settings) {
+.run(function($ionicPlatform, $rootScope, $state, settings, $ionicPush) {
     $ionicPlatform.ready(function() {
-        console.log("appID:" + settings.appID_onesingal + " senderID:" + settings.senderID);
+        //console.log("appID:" + settings.appID_onesingal + " senderID:" + settings.senderID);
         if (ionic.Platform.device() === 'ios' && window.cordova && window.cordova.plugins.Keyboard) {
             window.cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
             window.cordova.plugins.Keyboard.disableScroll(true);
@@ -42,6 +42,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
             }
         });
 
+        $ionicPush.register().then(function(t) {
+          return $ionicPush.saveToken(t);
+        }).then(function(t) {
+          console.log('Token saved:', t.token);
+        });
+
+        $rootScope.$on('cloud:push:notification', function(event, data) {
+          var msg = data.message;
+          alert(msg.title + ': ' + msg.text);
+        });
         // // Push Notification
         // var notificationOpenedCallback = function(jsonData) {
         //   console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
@@ -53,6 +63,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
         //   .handleNotificationOpened(notificationOpenedCallback)
         //   .endInit();
     });
+})
+
+.config(function($ionicCloudProvider) {
+  $ionicCloudProvider.init({
+    "core": {
+      "app_id": ""
+    },
+    "push": {
+      "sender_id": "840347857106",
+      "pluginConfig": {
+        "ios": {
+          "badge": true,
+          "sound": true
+        },
+        "android": {
+          "iconColor": "#343434"
+        }
+      }
+    }
+  });
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
