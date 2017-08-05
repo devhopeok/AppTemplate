@@ -1,6 +1,6 @@
 ﻿
 angular.module('starter.settings', [])
-
+.constant('IONIC_APP_ID', '82f0a708')
 .service('settings', function() {
     var ccid = '9504';
 
@@ -44,7 +44,9 @@ angular.module('starter.settings', [])
     var calendarIcon = "ion-calendar";
 
     var aboutContent = "AppMap Williston Business Directory is designed to promote businesses in Williston and surrounding areas.  The listing is active and current information of businesses.  If you are interested in marketing on the AppMap, to promote your business to thousands of viewers please contact us.";
-    var tracker_id = "UA-84899403-26";
+    //var tracker_id = "UA-84899403-26";
+    var tracker_id = "UA-84899403-1111";
+
     /*********************/
     /* DO NOT EDIT BELOW */
     /*********************/

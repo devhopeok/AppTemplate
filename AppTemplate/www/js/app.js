@@ -65,10 +65,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
     });
 })
 
-.config(function($ionicCloudProvider) {
+.config(function($ionicCloudProvider, IONIC_APP_ID) {
   $ionicCloudProvider.init({
+
     "core": {
-      "app_id": ""
+      "app_id": IONIC_APP_ID
     },
     "push": {
       "sender_id": "840347857106",
