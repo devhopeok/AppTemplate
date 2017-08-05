@@ -1,6 +1,5 @@
 ﻿
 angular.module('starter.settings', [])
-
 .constant('IONIC_APP_ID', '82f0a708')
 .service('settings', function() {
     var ccid = '9504';
