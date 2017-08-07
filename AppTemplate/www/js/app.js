@@ -56,6 +56,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
         //   console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
         // };
         //
+        
         // // One Signal
         // window.plugins.OneSignal
         //   .startInit(settings.appID_onesingal, settings.senderID)
