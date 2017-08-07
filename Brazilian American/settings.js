@@ -1,8 +1,8 @@
 ﻿
 angular.module('starter.settings', [])
-.constant('IONIC_APP_ID', '82f0a708')
+.constant('IONIC_APP_ID', '1b37418b')
 .service('settings', function() {
-    var ccid = '9504';
+    var ccid = '0272';
 
     var useDirectoryWebsite = "false";
     var directoryUrl = "";
@@ -23,7 +23,7 @@ angular.module('starter.settings', [])
     var quicklinkCIcon = "ion-home";
 
     var primaryColor = "#ffffff";
-    var secondaryColor = "#4478cd";
+    var secondaryColor = "#1E2453";
     var titleColor = "#ffffff";
     var textColor = "#000000";
 
@@ -43,10 +43,10 @@ angular.module('starter.settings', [])
     var mapsIcon = "ion-location";
     var calendarIcon = "ion-calendar";
 
-    var aboutContent = "AppMap Williston Business Directory is designed to promote businesses in Williston and surrounding areas.  The listing is active and current information of businesses.  If you are interested in marketing on the AppMap, to promote your business to thousands of viewers please contact us.";
-    var tracker_id = "UA-84899403-26";
-    //var tracker_id = "UA-84899403-1111";
+    var aboutContent = "The Brazilian-American Chamber of Commerce of Florida (BACCF) is an independent, non-profit business organization. As a non-governmental association, the Chamber is supported primarily by membership dues and income from fund-raising events. The growing establishment of Brazilian businesses in South Florida that commenced in the late 1970s rapidly brought about the need for a business exchange forum between Brazilian and US firms. The BACCF was founded in 1981 and is headquartered in Miami.  During the 1980s, the Chamber initiated a series of monthly luncheons featuring prominent speakers involved in Brazilian-American business issues. The luncheons quickly became popular venues for the exchange of ideas within the Brazilian-American business community. Throughout its years of operation, the BACCF expanded its range of activities to breakfasts for new members, business card exchanges, timely seminars and workshops, receptions to honor visiting dignitaries, and social events.  The Chamber’s main objective is to forge closer ties between the business communities of Brazil and Florida by assisting companies and business people seeking ways to penetrate or invest successfully in the Brazilian and US Markets. Since its founding, the BACCF has grown from a few companies to over 300 members, ranging from multinationals to individuals involved in Brazil-US relations.";
 
+    // var tracker_id = "UA-84899403-11";
+    var tracker_id = "UA-84899403-3333";
     /*********************/
     /* DO NOT EDIT BELOW */
     /*********************/

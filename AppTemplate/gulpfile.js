@@ -37,7 +37,7 @@ gulp.task('copyAppMapp', function(){
   gulp.src('../AppMap/resources/**/*')
   .pipe(gulp.dest('./resources/'));
 
-  gulp.src('../AppMap/logo.png')
+  gulp.src('../AppMap/res/**/*')
   .pipe(gulp.dest('./www/res/'))
 });
 
@@ -51,11 +51,23 @@ gulp.task('copyBenzie', function(){
   gulp.src('../Benzie County/resources/**/*')
   .pipe(gulp.dest('./resources/'));
 
-  gulp.src('../Benzie County/logo.png')
+  gulp.src('../Benzie County/res/**/*')
   .pipe(gulp.dest('./www/res/'))
 });
 
+gulp.task('copyBrazilianAmerican', function(){
+  gulp.src('../Brazilian American/config.xml')
+  .pipe(gulp.dest('./'));
 
+  gulp.src('../Brazilian American/settings.js')
+  .pipe(gulp.dest('./www/js/'));
+
+  gulp.src('../Brazilian American/resources/**/*')
+  .pipe(gulp.dest('./resources/'));
+
+  gulp.src('../Brazilian American/res/**/*')
+  .pipe(gulp.dest('./www/res/'))
+});
 
 // gulp.task('copyWWW', function() {
 //    gulp.src('./www/**/*')
