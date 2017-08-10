@@ -55,7 +55,6 @@ gulp.task('copyBenzie', function(){
   .pipe(gulp.dest('./www/res/'))
 });
 
-
 gulp.task('copyBrazilianAmerican', function(){
   gulp.src('../Brazilian American/config.xml')
   .pipe(gulp.dest('./'));
