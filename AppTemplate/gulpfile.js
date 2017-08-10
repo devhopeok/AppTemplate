@@ -68,6 +68,7 @@ gulp.task('copyBrazilianAmerican', function(){
   gulp.src('../Brazilian American/res/**/*')
   .pipe(gulp.dest('./www/res/'))
 });
+
 // gulp.task('copyWWW', function() {
 //    gulp.src('./www/**/*')
 //    .pipe(gulp.dest('../App1/www'))
