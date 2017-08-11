@@ -69,30 +69,18 @@ gulp.task('copyBrazilianAmerican', function(){
   .pipe(gulp.dest('./www/res/'))
 });
 
-gulp.task('copy1', function(){
-  gulp.src('../1/config.xml')
-  .pipe(gulp.dest('./'));
+for (let i=0; i<200; i++){
+  gulp.task('copy'+i, function(){
+    gulp.src('../'+i+'/config.xml')
+    .pipe(gulp.dest('./'));
 
-  gulp.src('../1/settings.js')
-  .pipe(gulp.dest('./www/js/'));
+    gulp.src('../'+i+'/settings.js')
+    .pipe(gulp.dest('./www/js/'));
 
-  gulp.src('../1/resources/**/*')
-  .pipe(gulp.dest('./resources/'));
+    gulp.src('../'+i+'/resources/**/*')
+    .pipe(gulp.dest('./resources/'));
 
-  gulp.src('../1/res/**/*')
-  .pipe(gulp.dest('./www/res/'))
-});
-
-gulp.task('copy2', function(){
-  gulp.src('../2/config.xml')
-  .pipe(gulp.dest('./'));
-
-  gulp.src('../2/settings.js')
-  .pipe(gulp.dest('./www/js/'));
-
-  gulp.src('../2/resources/**/*')
-  .pipe(gulp.dest('./resources/'));
-
-  gulp.src('../2/res/**/*')
-  .pipe(gulp.dest('./www/res/'))
-});
+    gulp.src('../'+i+'/res/**/*')
+    .pipe(gulp.dest('./www/res/'))
+  });
+}
