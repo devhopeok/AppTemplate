@@ -82,3 +82,17 @@ gulp.task('copy1', function(){
   gulp.src('../1/res/**/*')
   .pipe(gulp.dest('./www/res/'))
 });
+
+gulp.task('copy2', function(){
+  gulp.src('../2/config.xml')
+  .pipe(gulp.dest('./'));
+
+  gulp.src('../2/settings.js')
+  .pipe(gulp.dest('./www/js/'));
+
+  gulp.src('../2/resources/**/*')
+  .pipe(gulp.dest('./resources/'));
+
+  gulp.src('../2/res/**/*')
+  .pipe(gulp.dest('./www/res/'))
+});
