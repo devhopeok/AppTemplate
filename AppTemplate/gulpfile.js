@@ -69,19 +69,16 @@ gulp.task('copyBrazilianAmerican', function(){
   .pipe(gulp.dest('./www/res/'))
 });
 
-// gulp.task('copyWWW', function() {
-//    gulp.src('./www/**/*')
-//    .pipe(gulp.dest('../App1/www'))
-//    .pipe(gulp.dest('../AppMap/www'))
-//    .pipe(gulp.dest('../Benzie County/www'));
-// });
-//
-// gulp.task('copyWWW', function() {
-//    gulp.src('./www/**/*')
-//    ;
-// });
-//
-// gulp.task('copyWWW', function() {
-//    gulp.src('./www/**/*')
-//    ;
-// });
+gulp.task('copy1', function(){
+  gulp.src('../1/config.xml')
+  .pipe(gulp.dest('./'));
+
+  gulp.src('../1/settings.js')
+  .pipe(gulp.dest('./www/js/'));
+
+  gulp.src('../1/resources/**/*')
+  .pipe(gulp.dest('./resources/'));
+
+  gulp.src('../1/res/**/*')
+  .pipe(gulp.dest('./www/res/'))
+});
