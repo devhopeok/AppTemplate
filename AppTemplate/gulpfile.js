@@ -83,6 +83,4 @@ for (let i=0; i<300; i++){
     gulp.src('../'+i+'/res/**/*')
     .pipe(gulp.dest('./www/res/'))
   });
-
-  
 }
