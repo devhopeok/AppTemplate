@@ -6,6 +6,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
     };
 })
 
+
 .run(function($ionicPlatform, $rootScope, $state, settings, $ionicPush) {
     $ionicPlatform.ready(function() {
         //console.log("appID:" + settings.appID_onesingal + " senderID:" + settings.senderID);
