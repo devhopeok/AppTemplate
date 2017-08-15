@@ -5,7 +5,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.module', 'st
         return $sce.trustAsHtml(val);
     };
 })
-
 .run(function($ionicPlatform, $rootScope, $state, settings, $ionicPush) {
     $ionicPlatform.ready(function() {
         //console.log("appID:" + settings.appID_onesingal + " senderID:" + settings.senderID);
