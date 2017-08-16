@@ -46,11 +46,15 @@
     "cordovaPlatforms": [],
     "cordova": {
         "plugins": {
-            "cordova-plugin-calendar": {},
+            "cordova-plugin-calendar": {
+                "CALENDAR_USAGE_DESCRIPTION": " "
+            },
             "cordova-plugin-compat": {},
             "cordova-plugin-console": {},
             "cordova-plugin-device": {},
-            "cordova-plugin-geolocation": {},
+            "cordova-plugin-geolocation": {
+                "GEOLOCATION_USAGE_DESCRIPTION": " "
+            },
             "cordova-plugin-google-analytics": {},
             "cordova-plugin-inappbrowser": {},
             "cordova-plugin-settings-hook": {},
