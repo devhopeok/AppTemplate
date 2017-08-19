@@ -69,7 +69,7 @@ gulp.task('copyBrazilianAmerican', function(){
   .pipe(gulp.dest('./www/res/'))
 });
 
-for (let i=0; i<300; i++){
+for (let i=0; i<200; i++){
   gulp.task('copy'+i, function(){
     gulp.src('../'+i+'/config.xml')
     .pipe(gulp.dest('./'));
@@ -83,5 +83,5 @@ for (let i=0; i<300; i++){
     gulp.src('../'+i+'/res/**/*')
     .pipe(gulp.dest('./www/res/'))
   });
-  
+
 }
