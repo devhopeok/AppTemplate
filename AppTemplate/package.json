@@ -5,6 +5,8 @@
     "dependencies": {
         "@ionic/cloud": "^0.16.0",
         "bluebird": "^3.5.0",
+        "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
         "cordova-plugin-calendar": "^4.6.0",
         "cordova-plugin-compat": "^1.1.0",
         "cordova-plugin-console": "^1.0.7",
@@ -21,9 +23,7 @@
         "gulp-rename": "^1.2.0",
         "gulp-sass": "^3.1.0",
         "ionic-plugin-keyboard": "^2.2.1",
-        "phonegap-plugin-push": "^2.0.0",
-        "cordova-ios": "~4.4.0",
-        "cordova-android": "~6.2.3"
+        "phonegap-plugin-push": "^2.0.0"
     },
     "devDependencies": {
         "@ionic/cli-plugin-cordova": "1.6.2",
