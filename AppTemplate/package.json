@@ -12,7 +12,7 @@
         "cordova-plugin-console": "^1.0.7",
         "cordova-plugin-device": "^1.1.6",
         "cordova-plugin-geolocation": "^2.4.3",
-        "cordova-plugin-google-analytics": "git+https://github.com/danwilson/google-analytics-plugin.git",
+        "cordova-plugin-google-analytics": "^1.8.3",
         "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-plugin-settings-hook": "^0.2.7",
         "cordova-plugin-statusbar": "^2.2.3",
@@ -55,7 +55,6 @@
             "cordova-plugin-geolocation": {
                 "GEOLOCATION_USAGE_DESCRIPTION": " "
             },
-            "cordova-plugin-google-analytics": {},
             "cordova-plugin-inappbrowser": {},
             "cordova-plugin-settings-hook": {},
             "cordova-plugin-statusbar": {},
@@ -63,7 +62,8 @@
             "ionic-plugin-keyboard": {},
             "phonegap-plugin-push": {
                 "SENDER_ID": "840347857106"
-            }
+            },
+            "cordova-plugin-google-analytics": {}
         },
         "platforms": [
             "android",
