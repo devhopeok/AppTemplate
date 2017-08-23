@@ -101,7 +101,7 @@
     <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="ionic-plugin-keyboard" spec="^1.0.9" />
-    <plugin name="phonegap-plugin-push" spec="^2.0.0">
+    <plugin name="phonegap-plugin-push" spec="^1.6.4">
         <variable name="SENDER_ID" value="840347857106" />
     </plugin>
 </widget>
