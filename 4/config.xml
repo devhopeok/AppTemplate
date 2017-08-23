@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.micronetonline.benziecountychamber" version="3.0.13" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Benzie County Chamber of Commerce</name>
+<widget id="com.micronetonline.appmap1" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>AppMapp - Williston Business Directory</name>
     <description>
-    Benzie County Chamber of Commerce Community App
+    AppMapp - Williston Business Directory
   </description>
     <author email="you@example.com" href="http://example.com.com/">&#xD;&#xD;
     Micronet&#xD;&#xD;
@@ -61,9 +61,9 @@
         <splash src="resources/ios/splash/Default~iphone.png" width="320" height="480"/>
     </platform>
     <platform name="ios">
-        <config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
-            <string>We can add events to your calendar, but only ones that you choose.</string>
-        </config-file>
+      <config-file parent="NSCalendarsUsageDescription" platform="ios" target="*-Info.plist">
+        <string>We can add events to your calendar, but only ones that you choose.</string>
+      </config-file>
     </platform>
     <access origin="*"/>
     <access launch-external="yes" origin="tel:*"/>
