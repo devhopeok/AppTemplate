@@ -95,7 +95,7 @@
     <plugin name="cordova-plugin-console" spec="^1.0.7" />
     <plugin name="cordova-plugin-device" spec="^1.1.6" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3" />
-    <plugin name="cordova-plugin-google-analytics" spec="git+https://github.com/danwilson/google-analytics-plugin.git" />
+    <plugin name="cordova-plugin-google-analytics" spec="^1.8.3" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
     <plugin name="cordova-plugin-settings-hook" spec="^0.2.7" />
     <plugin name="cordova-plugin-statusbar" spec="^2.2.3" />
