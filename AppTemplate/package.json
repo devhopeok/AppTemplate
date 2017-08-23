@@ -23,7 +23,7 @@
         "gulp-rename": "^1.2.0",
         "gulp-sass": "^3.1.0",
         "ionic-plugin-keyboard": "^2.2.1",
-        "phonegap-plugin-push": "^2.0.0"
+        "phonegap-plugin-push": "^1.10.5"
     },
     "devDependencies": {
         "@ionic/cli-plugin-cordova": "1.6.2",
@@ -66,8 +66,7 @@
             "cordova-plugin-google-analytics": {}
         },
         "platforms": [
-            "android",
-            "ios"
+            "android"
         ]
     }
 }
