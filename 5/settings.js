@@ -6,7 +6,6 @@ angular.module('starter.settings', [])
 
     var useDirectoryWebsite = "false";
     var directoryUrl = "";
-
     var useContextId = true;
     var contextId = 400;
     var bannerAdsVisibility = "visible";
