@@ -1,14 +1,14 @@
 ﻿
 angular.module('starter.settings', [])
-.constant('IONIC_APP_ID', '82f0a708')
+.constant('IONIC_APP_ID', 'b4a718fa')
 .service('settings', function() {
-    var ccid = '9504';
+    var ccid = '1380';
 
     var useDirectoryWebsite = "false";
     var directoryUrl = "";
 
-    var useContextId = false;
-    var contextId = 211;
+    var useContextId = true;
+    var contextId = 400;
     var bannerAdsVisibility = "visible";
 
     var quicklinkVisibility = "disabled";
@@ -22,10 +22,10 @@ angular.module('starter.settings', [])
     var quicklinkCTitle = "Lodging";
     var quicklinkCIcon = "ion-home";
 
-    var primaryColor = "#ffffff";
-    var secondaryColor = "#4478cd";
+    var primaryColor = "#b31720";
+    var secondaryColor = "#1c2674";
     var titleColor = "#ffffff";
-    var textColor = "#000000";
+    var textColor = "#ffffff";
 
     var logoFile = "res/logo.png";
     var backgroundFile = "res/background.png";
@@ -34,7 +34,7 @@ angular.module('starter.settings', [])
     var hotdealsIcon = "ion-pricetags";
     var jobsIcon = "ion-ios-briefcase";
     var searchIcon = "ion-ios-search-strong";
-    var newsIcon = "ion-ios-paper";
+    var newsIcon = "ion-document-text";
     var eventsIcon = "ion-calendar";
     var aboutIcon = "ion-person";
     var callIcon = "ion-ios-telephone";
@@ -43,8 +43,10 @@ angular.module('starter.settings', [])
     var mapsIcon = "ion-location";
     var calendarIcon = "ion-calendar";
 
-    var aboutContent = "AppMap Williston Business Directory is designed to promote businesses in Williston and surrounding areas.  The listing is active and current information of businesses.  If you are interested in marketing on the AppMap, to promote your business to thousands of viewers please contact us.";
-    //var tracker_id = "UA-84899403-26";
+    var aboutContent = "Founded in 1913, the Carlisle Area Chamber of Commerce has been serving the Carlisle, Pennsylvania Area for more than 100 years. Our mission is to serve as a community catalyst that encourages and supports economic growth and stability.
+        We help connect people to what they need to start a business here, grow a business here -- or even move a business to Carlisle. We plan, host, and partner in diverse networking and professional-development events.
+        We foster dialogue and communication with our members and community partners about how we can better support them. We offer exclusive advertising opportunities to members that showcase their business. ... and much, much more!";
+    //var tracker_id = "UA-84899403-32";
     var tracker_id = "UA-84899403-1111";
 
     /*********************/
