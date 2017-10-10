@@ -42,9 +42,12 @@ angular.module('starter.settings', [])
     var mapsIcon = "ion-location";
     var calendarIcon = "ion-calendar";
 
-    var aboutContent = "Founded in 1913, the Carlisle Area Chamber of Commerce has been serving the Carlisle, Pennsylvania Area for more than 100 years. Our mission is to serve as a community catalyst that encourages and supports economic growth and stability.\r\n\
-    We help connect people to what they need to start a business here, grow a business here -- or even move a business to Carlisle. We plan, host, and partner in diverse networking and professional-development events.\r\n\
-    We foster dialogue and communication with our members and community partners about how we can better support them. We offer exclusive advertising opportunities to members that showcase their business. ... and much, much more!";
+    var aboutContent = "Founded in 1913, the Carlisle Area Chamber of Commerce has been serving the Carlisle, Pennsylvania Area for more than 100 years. Our mission is to serve as a community catalyst that encourages and supports economic growth and stability.<br /><br />\
+                        We help connect people to what they need to start a business here, grow a business here -- or even move a business to Carlisle. <br /><br />\
+                        We plan, host, and partner in diverse networking and professional-development events.<br /><br />\
+                        We foster dialogue and communication with our members and community partners about how we can better support them. <br /></br />\
+                        We offer exclusive advertising opportunities to members that showcase their business. ... <br /><br />\
+                        and much, much more!";
     //var tracker_id = "UA-84899403-32";
     var tracker_id = "UA-84899403-1111";
 
