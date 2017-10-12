@@ -296,17 +296,23 @@ angular.module('starter.module', [])
     $scope.iconText = settings.iconText;
     $scope.logoBackground = settings.logos;
 
-    $http.get(settings.apiMembers, {
+    var memFilter = "?$filter=StatusType eq 2 or StatusType eq 4";
+    var memUrl = settings.apiMembers;
+    var qidx = memUrl.indexOf("?");
+    if (qidx > -1) memUrl = memUrl.substr(0, qidx);
+    $http.get(memUrl + memFilter, {
             headers: {
                 "x-apikey": "4AF357D1-3A3E-4BD9-A89B-F6D286FA7C3C"
             }
         })
         .success(function(data) {
-            data.sort(function(a, b) {
-                return a.DisplayName.localeCompare(b.DisplayName);
+            data.sort(function (a, b) {
+                var disp1 = a == null || a.DisplayName == null ? '' : a.DisplayName;
+                var disp2 = b == null || b.DisplayName == null ? '' : b.DisplayName;
+                return disp1.localeCompare(disp2);
             });
 
-            window.localStorage.setItem('lsMembers', JSON.stringify(data));
+            window.localStorage.setItem('lsMembers' + settings.ccid, JSON.stringify(data));
             
             $scope.memberData = data;
             settings.members = data;
@@ -414,7 +420,11 @@ angular.module('starter.module', [])
 })
 
 .controller('JobsCtrl', function($scope, $http, $ionicPopup, settings) {
-    var jobsFilter = "?$filter=EndDate gt datetime'" + settings.currentDate + "'";
+    var jobsFilter = "?$filter=Status eq 2 and Purchased eq true and StartDate le datetime'" +
+            settings.currentDate +
+            "' and EndDate ge datetime'" +
+            settings.currentDate +
+            "'";
     $http.get(settings.apiJobs + jobsFilter, {
             headers: {
                 "x-apikey": "4AF357D1-3A3E-4BD9-A89B-F6D286FA7C3C"
@@ -904,8 +914,10 @@ angular.module('starter.module', [])
             }
         })
         .success(function(data) {
-            data.sort(function(a, b) {
-                return a.DisplayName.localeCompare(b.DisplayName);
+            data.sort(function (a, b) {
+                var disp1 = a.DisplayName == null ? '' : a.DisplayName;
+                var disp2 = b.DisplayName == null ? '' : b.DisplayName;
+                return disp1.localeCompare(disp2);
             });
             $scope.memberData = data;
 
@@ -1064,8 +1076,10 @@ angular.module('starter.module', [])
             }
         })
         .success(function(data) {
-            data.sort(function(a, b) {
-                return a.Name.localeCompare(b.Name);
+            data.sort(function (a, b) {
+                var disp1 = a.Name == null ? '' : a.Name;
+                var disp2 = b.Name == null ? '' : b.Name;
+                return disp1.localeCompare(disp2);
             });
             $scope.directoryData = data;
 
@@ -1096,10 +1110,10 @@ angular.module('starter.module', [])
 
     if (settings.members == '' || settings.members == undefined) {
         console.log('using ls');
-        $scope.members = JSON.parse(window.localStorage.getItem('lsMembers'));
+        $scope.members = JSON.parse(window.localStorage.getItem('lsMembers' + settings.ccid));
     }
     else {
-        console.log('using settigns');
+        console.log('using settings');
         $scope.members = settings.members;
     }
 
@@ -1160,7 +1174,7 @@ angular.module('starter.module', [])
         var regex = new RegExp($scope.regexEscape($scope.memberFilter), 'i');
         return (member.DisplayName !== null && member.DisplayName.match(regex)) ||
             (member.Description !== null && member.Description.match(regex)) ||
-            (member.PrimaryPhone !== null && member.PrimaryPhone.match(regex)) ||
+            (member.DispPhone1 !== null && member.DispPhone1.match(regex)) ||
             (member.HoursOfOperation !== null && member.HoursOfOperation.match(regex)) ? true : false;
     };
 
